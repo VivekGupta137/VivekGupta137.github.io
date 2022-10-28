@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --color-box-shadow: #b8b9be;
+}
+
+@layer base {
+    :root {
+        --color-bg: #e6e7ee;
+
+        /* ... */
+    }
+}
+
+.shadow-soft {
+    box-shadow: 6px 6px 12px var(--color-box-shadow), -6px -6px 12px #fff !important;
+}
+.shadow-inset {
+    box-shadow: inset 2px 2px 5px var(--color-box-shadow),
+        inset -3px -3px 7px #fff !important;
+}
+
+.hero-gradient {
+    background: linear-gradient(241deg, #972297, #4698d0, #61a831);
+    background-size: 600% 600%;
+
+    -webkit-animation: AnimationName 1s ease infinite;
+    -moz-animation: AnimationName 1s ease infinite;
+    animation: AnimationName 1s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 43% 0%;
+    }
+    50% {
+        background-position: 58% 100%;
+    }
+    100% {
+        background-position: 43% 0%;
+    }
+}
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 43% 0%;
+    }
+    50% {
+        background-position: 58% 100%;
+    }
+    100% {
+        background-position: 43% 0%;
+    }
+}
+@keyframes AnimationName {
+    0% {
+        background-position: 43% 0%;
+    }
+    50% {
+        background-position: 58% 100%;
+    }
+    100% {
+        background-position: 43% 0%;
+    }
+}
