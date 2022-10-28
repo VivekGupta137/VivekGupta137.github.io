@@ -4,11 +4,14 @@
 
 :root {
     --color-box-shadow: #b8b9be;
+    --color-box-shadow-dark1: #4e4e4e;
+    --color-box-shadow-dark2: #6a6a6a;
 }
 
 @layer base {
     :root {
         --color-bg: #e6e7ee;
+        --color-bg-dark: #5c5c5c;
 
         /* ... */
     }
@@ -20,6 +23,24 @@
 .shadow-inset {
     box-shadow: inset 2px 2px 5px var(--color-box-shadow),
         inset -3px -3px 7px #fff !important;
+}
+.shadow-soft-orange {
+    box-shadow: 6px 6px 12px #d8b791, -6px -6px 12px #fff7c4;
+}
+.shadow-soft-lime {
+    box-shadow: 6px 6px 12px #b8d485, -6px -6px 12px #faffb5;
+}
+.shadow-soft-cyan {
+    box-shadow: 6px 6px 12px #8ccfd6, -6px -6px 12px #beffff;
+}
+
+.shadow-soft-dark {
+    box-shadow: 6px 6px 12px var(--color-box-shadow-dark1),
+        -6px -6px 12px var(--color-box-shadow-dark2) !important;
+}
+.shadow-inset-dark {
+    box-shadow: inset 2px 2px 5px var(--color-box-shadow-dark1),
+        inset -3px -3px 7px var(--color-box-shadow-dark2) !important;
 }
 
 .hero-gradient {

@@ -1,6 +1,6 @@
 const AboutDescription = () => {
     return (
-        <div className="px-10 py-5 rounded-lg shadow-soft">
+        <div className="px-10 py-5 rounded-lg shadow-soft bg-orange-200">
             People find me to be an upbeat, self-motivated team player with
             excellent communication skills. For the past 2 years I have been
             working in Big Data technologies which include technology like

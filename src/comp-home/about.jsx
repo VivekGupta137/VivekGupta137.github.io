@@ -4,7 +4,7 @@ import AboutExperience from "./about-experience";
 
 const About = () => {
     return (
-        <div className="min-h-screen">
+        <div className="min-h-screen ">
             <div className="flex flex-col h-28 bg-yellow-300">
                 <div id="line1" className="flex grow text-5xl font-bold gap-5">
                     <div>HTML</div>

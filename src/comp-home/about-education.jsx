@@ -27,7 +27,7 @@ const AboutEducation = () => {
             {education.map((ed, idx) => (
                 <div
                     key={idx}
-                    className="basis-1/3 rounded-lg px-5 py-2 shadow-soft"
+                    className="basis-1/3 rounded-lg px-5 py-2 shadow-soft bg-lime-200"
                 >
                     {ed.title}
                 </div>
