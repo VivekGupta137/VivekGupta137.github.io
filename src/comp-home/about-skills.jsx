@@ -1,8 +1,9 @@
 import {motion, useAnimationFrame, useMotionValue, useScroll, useSpring, useTransform, useVelocity } from "framer-motion"
 import { useEffect, useRef } from "react"
 import { wrap } from "@motionone/utils";
+import ReactIcon from "../icons/reactIcon";
 
-const NewsText = ({children,baseVelocity=10}) => {
+const NewsText = ({children,baseVelocity=5}) => {
     const x = useMotionValue(0)
     const { scrollY } = useScroll();
     const scrollVelocity = useVelocity(scrollY);
@@ -44,7 +45,7 @@ const NewsText = ({children,baseVelocity=10}) => {
 const AboutSkills = ()=>{
 
     return <div className="flex bg-yellow-300 overflow-hidden">
-        <NewsText>HTML•CSS•Javascript</NewsText>
+        <NewsText>HTML•Tailwindcss•Javascript</NewsText>
         
     </div>
 
