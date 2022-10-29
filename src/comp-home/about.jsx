@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import AboutDescription from "./about-description";
 import AboutDescriptionCard from "./about-description-card";
 import AboutEducation from "./about-education";
@@ -9,10 +10,19 @@ import AboutSkills from "./about-skills";
 import AboutSkillsCard from "./about-skills-card";
 
 const About = () => {
+    const spring = {
+        type: "spring",
+        stiffness: 700,
+        damping: 30,
+    };
     return (
         <div className="min-h-screen ">
             {/* <AboutSkills /> */}
-            <div className="max-w-[800px] m-auto flex flex-wrap justify-between">
+            <motion.div
+                layout
+                transition={spring}
+                className="max-w-[800px] m-auto flex flex-wrap justify-between"
+            >
                 <AboutDescriptionCard />
                 <AboutEducationCard />
                 <div className="basis-full">
@@ -20,7 +30,7 @@ const About = () => {
                 </div>
                 <AboutExperienceCard />
                 <AboutExtrasCard />
-            </div>
+            </motion.div>
             {/* <div className="flex flex-col items-center mt-5">
                 <div className="flex flex-wrap w-2/3">
                     <div className="basis-1/2 p-2">

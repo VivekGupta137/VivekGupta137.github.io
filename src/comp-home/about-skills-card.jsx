@@ -95,7 +95,7 @@ const AboutSkillsCard = () => {
             <div className="text-3xl font-mono">Skills</div>
             <div className="flex flex-wrap justify-center md:justify-start">
                 {skills.map(({ title, icons }) => (
-                    <div className="mx-2 my-2 p-5 shadow-soft rounded-3xl w-[200px]">
+                    <div className="mx-2 my-2 p-5 shadow-soft rounded-3xl w-[300px] md:w-[200px] ">
                         <div className="text-4xl">{title}</div>
                         <div className="flex flex-wrap mt-5">
                             {icons.map(({ name, icon }) => (

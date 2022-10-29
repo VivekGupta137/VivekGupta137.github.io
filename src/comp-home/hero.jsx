@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import profileimg from "../assets/profile.png";
-import handwave from "../assets/waving_hand_sign_512.gif"
-
+import handwave from "../assets/waving_hand_sign_512.gif";
 
 const Hero = () => {
     const constraintsRef = useRef(null);
@@ -24,8 +23,14 @@ const Hero = () => {
                 </motion.div>
                 <div className="text-5xl leading-normal">
                     <div>
-                    <div className="inline-block">Hi</div>
-                    <div className="inline-block scale-x-[-1] translate-x-2 translate-y-3"><img src={handwave} className="h-16" draggable="false" /></div>
+                        <div className="inline-block">Hi</div>
+                        <div className="inline-block scale-x-[-1] translate-x-2 translate-y-3">
+                            <img
+                                src={handwave}
+                                className="h-16"
+                                draggable="false"
+                            />
+                        </div>
                     </div>
                     <div>I'm Vivek Gupta</div>
                 </div>
