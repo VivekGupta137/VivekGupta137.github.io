@@ -3,6 +3,7 @@ import { useRef } from "react";
 import profileimg from "../assets/profile.png";
 import handwave from "../assets/waving_hand_sign_512.gif";
 import HeroProfile from "./hero-profile";
+import HeroRoles from "./hero-roles";
 
 const Hero = () => {
     const constraintsRef = useRef(null);
@@ -24,13 +25,7 @@ const Hero = () => {
                     </div>
                     <div>I'm Vivek Gupta</div>
                 </div>
-                <div className="text-1xl sm:text-2xl">
-                    <div>Tech Enthusiast</div>
-                    <div>Creative Full Stack Developer</div>
-                    <div>Big Data Engineer</div>
-                    <div>UI/UX Designer</div>
-                    <div>SEO Expert</div>
-                </div>
+                <HeroRoles />
             </div>
         </div>
     );
