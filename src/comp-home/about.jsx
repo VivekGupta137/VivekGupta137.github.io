@@ -18,19 +18,21 @@ const About = () => {
     return (
         <div className="min-h-screen ">
             {/* <AboutSkills /> */}
-            <motion.div
-                layout
-                transition={spring}
-                className="max-w-[800px] m-auto flex flex-wrap justify-between"
-            >
-                <AboutDescriptionCard />
-                <AboutEducationCard />
-                <div className="basis-full">
-                    <AboutSkillsCard />
-                </div>
-                <AboutExperienceCard />
-                <AboutExtrasCard />
-            </motion.div>
+            <div className="">
+                <motion.div
+                    layout
+                    transition={spring}
+                    className="max-w-[800px] m-auto flex flex-wrap justify-between relative"
+                >
+                    <AboutDescriptionCard />
+                    <AboutEducationCard />
+                    <div className="basis-full">
+                        <AboutSkillsCard />
+                    </div>
+                    <AboutExperienceCard />
+                    <AboutExtrasCard />
+                </motion.div>
+            </div>
             {/* <div className="flex flex-col items-center mt-5">
                 <div className="flex flex-wrap w-2/3">
                     <div className="basis-1/2 p-2">
