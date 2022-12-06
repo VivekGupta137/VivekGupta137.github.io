@@ -8,7 +8,7 @@ const Home = () => {
         <div className="bg-[var(--color-bg)]">
             <Hero />
             <About />
-            <Footer />
+            {/* <Footer /> */}
             <VerticalNav />
         </div>
     );

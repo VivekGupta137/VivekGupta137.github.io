@@ -1,6 +1,13 @@
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
+import AboutExperienceSelect from "./about-experience-select";
+
 const AboutExperienceCard = () => {
+    const [selectedItem, setSelectedItem] = useState(null);
+
     let experience = [
         {
+            id: "experience_wd",
             company: "Western Digital",
             title: "Senior Software Engineer",
             start: new Date("2021-01-11"),
@@ -12,7 +19,7 @@ const AboutExperienceCard = () => {
 
     let getNumYears = (start, end) => {
         let res = end.getFullYear() - start.getFullYear();
-        console.log(start.getFullYear(), end.getFullYear());
+        // console.log(start.getFullYear(), end.getFullYear());
         return res;
     };
     let getNumMonths = (start, end) => {
@@ -32,8 +39,23 @@ const AboutExperienceCard = () => {
                         start,
                         end = new Date(),
                         description,
+                        id,
                     }) => (
-                        <div className="p-5 cursor-pointer rounded-3xl shadow-soft mx-2 my-2 min-w-[150px] hover:bg-purple-200 transition-all delay-100 duration-300">
+                        <motion.div
+                            layoutId={id}
+                            onClick={() => {
+                                // setSelectedItem(null);
+                                setSelectedItem({
+                                    company,
+                                    title,
+                                    start,
+                                    end: new Date(),
+                                    description,
+                                    id,
+                                });
+                            }}
+                            className="p-5 cursor-pointer rounded-3xl shadow-soft mx-2 my-2 min-w-[150px] hover:bg-purple-200 transition-colors delay-100 duration-300"
+                        >
                             <div className="flex">
                                 <div className="text-6xl font-bold font-mono">
                                     {getNumYears(start, end)}
@@ -48,7 +70,7 @@ const AboutExperienceCard = () => {
                                 {company}
                             </div>
                             <div className="text-xl font-mono">{title}</div>
-                        </div>
+                        </motion.div>
                         // <div className="mx-2 my-2 p-5 shadow-soft rounded-3xl max-w-[350px] ">
                         //     <div className="text-4xl">{company}</div>
                         //     <div className="font-mono">{title}</div>
@@ -57,6 +79,14 @@ const AboutExperienceCard = () => {
                     )
                 )}
             </div>
+            <AnimatePresence>
+                {!!selectedItem && (
+                    <AboutExperienceSelect
+                        {...selectedItem}
+                        handleClick={() => setSelectedItem(null)}
+                    />
+                )}
+            </AnimatePresence>
         </div>
     );
 };

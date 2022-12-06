@@ -31,26 +31,25 @@ const AboutEducationSelect = ({
                     <div className="px-2 text-3xl font-extrabold font-rounded shadow-soft rounded-3xl bg-[var(--color-bg)]">
                         {degree}
                     </div>
-                    <div className="px-2 text-xl font-light shadow-soft rounded-3xl bg-[var(--color-bg)] flex items-center">
+                    <div className="px-2 text-sm md:text-xl font-light shadow-soft rounded-3xl bg-[var(--color-bg)] flex items-center">
                         <div>
                             {start} - {end}
                         </div>
                     </div>
                 </div>
 
-                <div className="mt-2 flex items-center justify-between">
-                    <div className="overflow-hidden font-rounded font-bold break-inside-avoid-page text-2xl flex gap-2">
-                        <div className="self-center">
-                            <AcademicCapIcon />
-                        </div>
-                        <div className="">{college}</div>
+                <div className="mt-2 overflow-hidden font-rounded font-bold break-inside-avoid-page text-2xl flex gap-2">
+                    <div className="self-center">
+                        <AcademicCapIcon />
                     </div>
-                    <div
-                        onClick={() => handleClick()}
-                        className="rounded-full cursor-pointer shadow-soft bg-red-300 hover:bg-red-400 transition-colors p-1 "
-                    >
-                        <CloseIcon />
-                    </div>
+                    <div className="">{college}</div>
+                </div>
+
+                <div
+                    onClick={() => handleClick()}
+                    className="absolute right-9 top-0 translate-x-[50%] translate-y-[-50%] rounded-full cursor-pointer shadow-soft bg-red-300 hover:bg-red-400 transition-colors p-1 "
+                >
+                    <CloseIcon />
                 </div>
                 <div>
                     <div className="flex gap-2">
