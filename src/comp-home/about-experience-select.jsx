@@ -1,7 +1,14 @@
 import { motion } from "framer-motion";
 import CloseIcon from "../icons/closeIcon";
 
-const AboutExperienceSelect = ({ id, handleClick }) => {
+const AboutExperienceSelect = ({
+    id,
+    title,
+    company,
+    description,
+    pointers,
+    handleClick,
+}) => {
     return (
         <motion.div
             layout
@@ -19,6 +26,16 @@ const AboutExperienceSelect = ({ id, handleClick }) => {
                     className="absolute right-9 top-0 translate-x-[50%] translate-y-[-50%] rounded-full cursor-pointer shadow-soft bg-red-300 hover:bg-red-400 transition-colors p-1 "
                 >
                     <CloseIcon />
+                </div>
+                <div className="absolute top-0 translate-y-[-50%] flex gap-2 ">
+                    <div className="px-2 text-3xl font-extrabold font-rounded shadow-soft rounded-3xl bg-[var(--color-bg)]">
+                        {company}
+                    </div>
+                </div>
+                <div className="pt-3">
+                    {description.map((des, idx) => {
+                        return <div className="text-left mt-2">{des}</div>;
+                    })}
                 </div>
             </motion.div>
         </motion.div>

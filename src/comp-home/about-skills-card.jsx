@@ -61,7 +61,7 @@ const AboutSkillsCard = () => {
                 },
                 {
                     title: "Building web apps at WD",
-                    tags: ["UI/UX", "Full-Stack", "Big Data"],
+                    tags: ["UI/UX", "Full-Stack", "Big Data", "2+ Years"],
                     description: "Developed data intensive web applications.",
                 },
             ],
@@ -157,7 +157,7 @@ const AboutSkillsCard = () => {
             projects: [
                 {
                     title: "Building big data pipelines at WD",
-                    tags: ["Big Data"],
+                    tags: ["Big Data", "2+ Years"],
                     description: "Developed data intensive web applications.",
                 },
             ],
