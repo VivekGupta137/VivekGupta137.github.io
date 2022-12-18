@@ -45,6 +45,7 @@ jobs:
 
             - name: adding git globals
               run: |
+                  git init
                   git config --global user.email "vivekgpt107@gmail.com"
                   git config --global user.name "VivekGupta137"
 
