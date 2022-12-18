@@ -43,6 +43,9 @@ jobs:
                   cd dist
                   echo > .nojekyll
 
+            - name: run ls
+              run: ls -la
+
             - name: adding git globals
               run: |
                   git init
