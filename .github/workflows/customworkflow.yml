@@ -41,13 +41,20 @@ jobs:
                   cd dist
                   echo > .nojekyll
 
-            - name: adding to github
+            - name: adding globals
               run: |
                   git config --global user.email "vivekgpt107@gmail.com"
                   git config --global user.name "VivekGupta137"
+
+            - name: adding to git
+              run: |
                   git checkout -B main
                   git add -A
                   git commit -m 'deploy'
+
+            - name: git push
+              run: |
+                  git push -f git@github.com:VivekGupta137/VivekGupta137.github.io.git main
             # # Runs a set of commands using the runners shell
             # - name: Run the deploy script
             #   run: bash deploy.sh
