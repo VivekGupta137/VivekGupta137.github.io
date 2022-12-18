@@ -57,10 +57,9 @@ jobs:
                   git commit -m "deploy"
 
             - name: Push changes
-              uses: ad-m/github-push-action@master
-              with:
-                  github_token: ${{ secrets.GITHUB_TOKEN }}
-                  branch: main
+              run: |
+                  cd dist
+                  git push -f git@github.com:VivekGupta137/VivekGupta137.github.io.git main
 
             # # Runs a set of commands using the runners shell
             # - name: Run the deploy script
