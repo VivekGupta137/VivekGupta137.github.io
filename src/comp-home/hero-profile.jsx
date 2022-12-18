@@ -1,4 +1,4 @@
-import profileimg from "../assets/profile.png";
+import profileimg from "../assets/lowresprofile.jpg";
 import { motion } from "framer-motion";
 
 const HeroProfile = () => {

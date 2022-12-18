@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import profileimg from "../assets/profile.png";
-import handwave from "../assets/waving_hand_sign_512.gif";
+import handwave from "../assets/wavinghand.gif";
 import HeroProfile from "./hero-profile";
 import HeroRoles from "./hero-roles";
 

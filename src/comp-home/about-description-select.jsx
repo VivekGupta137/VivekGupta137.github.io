@@ -45,7 +45,7 @@ const AboutDescriptionSelect = ({ id, description, hobbies, handleClick }) => {
                 </div>
                 <div className="flex items-center gap-1">
                     <div className="font-bold font-rounded">Phone:</div>
-                    <div>+91 9523629331</div>
+                    <div className="oldstyle-nums ">+91 9523629331</div>
                 </div>
                 <div className="italic">
                     React out if you want to talk about emerging tech, creating

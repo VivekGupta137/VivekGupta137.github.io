@@ -59,13 +59,16 @@ const AboutExperienceCard = () => {
                         >
                             <div className="flex">
                                 <div className="text-6xl font-bold font-mono">
-                                    {getNumYears(start, end)}
+                                    {/* {getNumYears(start, end)} */}2
                                 </div>
-                                <div className="text-3xl self-end">yr</div>
-                                <div className="text-4xl self-end font-bold font-mono ml-2">
+                                <div className="text-5xl font-bold font-mono">
+                                    +
+                                </div>
+                                <div className="text-3xl self-end"> years</div>
+                                {/* <div className="text-4xl self-end font-bold font-mono ml-2">
                                     {getNumMonths(start, end)}
                                 </div>
-                                <div className="text-xl self-end">months</div>
+                                <div className="text-xl self-end">months</div> */}
                             </div>
                             <div className="my-2 text-4xl font-semibold font-sans">
                                 {company}

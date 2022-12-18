@@ -10,6 +10,8 @@ import {
     shift,
     useFloating,
 } from "@floating-ui/react-dom";
+import AboutContactEmailSending from "./about-contact-email-sending";
+import AboutContactEmailSent from "./about-contact-email-sent";
 
 const AboutContactButton = () => {
     // open the contact form or not
@@ -28,12 +30,14 @@ const AboutContactButton = () => {
     });
 
     // useEffect(() => {}, [reference, floating]);
+    // console.log(reference);
 
     let handleContactClick = () => {
         setOpen((x) => !!!x);
     };
+
     return (
-        <div className="relative">
+        <div>
             <motion.div
                 layoutId="contact"
                 ref={reference}
@@ -49,6 +53,7 @@ const AboutContactButton = () => {
                 }}
             >
                 Contact
+                {/* <AboutContactEmailSending /> */}
             </motion.div>
             <AnimatePresence>
                 {open && (
@@ -56,13 +61,13 @@ const AboutContactButton = () => {
                         ref={floating}
                         style={{
                             position: strategy,
-                            top: 0,
-                            left: 0,
                             width: "max-content",
                         }}
-                        initial={{ top: 0, left: 0, opacity: 0 }}
+                        initial={{
+                            opacity: 0,
+                        }}
                         animate={{ top: y, left: x, opacity: 1 }}
-                        exit={{ opacity: 0, top: -200 }}
+                        exit={{ opacity: 0 }}
                         transition={{
                             type: "spring",
                             stiffness: 200,

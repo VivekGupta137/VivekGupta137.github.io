@@ -92,7 +92,7 @@ const AboutSkillsSelect = ({
                                         <div className="pt-1">
                                             {shortDescription}
                                         </div>
-                                        <div className="flex gap-2">
+                                        <div className="flex gap-1 items-center flex-wrap">
                                             {!!icons &&
                                                 icons.map(
                                                     ({ name, icon }, idx) => (
