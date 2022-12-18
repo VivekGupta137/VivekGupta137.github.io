@@ -19,7 +19,10 @@ echo > .nojekyll
 echo 'www.iamvivekgupta.me' > CNAME
 
 git init
-git checkout -B master
+git config user.name "ci-gh-actions"
+git config user.email "ci-gh-actions@someplace.com"
+
+git checkout -B main
 git add -A
 git commit -m 'deploy'
 
