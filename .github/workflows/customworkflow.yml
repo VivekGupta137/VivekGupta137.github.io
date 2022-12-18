@@ -48,18 +48,21 @@ jobs:
 
             - name: adding git globals
               run: |
+                  cd dist
                   git init
                   git config --global user.email "vivekgpt107@gmail.com"
                   git config --global user.name "VivekGupta137"
 
             - name: adding to git
               run: |
+                  cd dist
                   git checkout -B main
                   git add -A
                   git commit -m 'deploy'
 
             - name: git push
               run: |
+                  cd dist
                   git push -f git@github.com:VivekGupta137/VivekGupta137.github.io.git main
             # # Runs a set of commands using the runners shell
             # - name: Run the deploy script
